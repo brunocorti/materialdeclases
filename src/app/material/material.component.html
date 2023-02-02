@@ -1,0 +1,222 @@
+<div id="búsquedas">
+<div id="instrumento">
+    Buscá por instrumento:
+    <app-busq-instrumento (searchTextChanged8)="onSearchTextEntered8($event)"></app-busq-instrumento>
+</div>
+<div>
+    Buscá por canción:
+    <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+</div>
+<div>
+    Buscá por artista:
+    <app-material2 (searchTextChanged2)="onSearchTextEntered2($event)"></app-material2>
+</div>
+<div>
+    Buscá por acorde:
+    <app-busq-acorde (searchTextChanged3)="onSearchTextEntered3($event)"></app-busq-acorde>
+</div>
+<div>
+    Buscá por técnica de mano derecha:
+    <app-busq-tecnica (searchTextChanged4)="onSearchTextEntered4($event)"></app-busq-tecnica>
+</div>
+<div>
+    Buscá por género:
+    <app-busq-genero (searchTextChanged5)="onSearchTextEntered5($event)"></app-busq-genero>
+</div>
+<div>
+    Buscá por escala:
+    <app-busq-modo (searchTextChanged6)="onSearchTextEntered6($event)"></app-busq-modo>
+</div>
+
+<div>
+    Buscá por dificultad:
+    <app-busq-dificultad (searchTextChanged7)="onSearchTextEntered7($event)"></app-busq-dificultad>
+</div>
+</div>
+
+<table class="table table-dark table-striped">
+<thead>
+    <tr class="table table-dark">
+        <th>Instrumento</th>
+        <th>Canción</th>
+        <th>Artista</th>
+        <th>Acordes</th>
+        <th>Técnica</th>
+        <th>Tipo</th>
+        <th>Dificultad</th>
+        <th>Género</th>
+        <th>Escala</th>
+        <th>Observaciones</th>
+    </tr>
+</thead>
+</table>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText.length > 0 && song.name.toLowerCase().includes(searchText)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText2.length > 0 && song.artist.toLowerCase().includes(searchText2)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText3.length > 0 && song.chords.toLowerCase().includes(searchText3)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText4.length > 0 && song.technique.toLowerCase().includes(searchText4)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText5.length > 0 && song.gender.toLowerCase().includes(searchText5)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText6.length > 0 && song.scale.toLowerCase().includes(searchText6)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText7.length > 0 && song.difficulty.toLowerCase().includes(searchText7)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="tabla" *ngFor="let song of songs">
+    <div *ngIf="searchText8.length > 0 && song.instrument.toLowerCase().includes(searchText8)">
+        <table class="table table-dark table-striped">
+            <tbody>
+                <tr class="table table-dark">
+                    <td>{{song.instrument}}</td>
+                    <td>{{song.name}}</td>
+                    <td>{{song.artist}}</td>
+                    <td>{{song.chords}}</td>
+                    <td>{{song.technique}}</td>
+                    <td>{{song.type}}</td>
+                    <td>{{song.difficulty}}</td>
+                    <td>{{song.gender}}</td>
+                    <td>{{song.scale}}</td>
+                    <td>{{song.observations}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
